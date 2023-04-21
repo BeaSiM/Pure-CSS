@@ -1,0 +1,66 @@
+body {
+  background-color: #000;
+}
+
+.container {
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.parafuso {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  z-index: 1;
+  box-shadow: inset -10px -10px 10px #7d7575, inset 3px 3px 5px #fff;
+}
+
+@keyframes roda-roda {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.vetor {
+  width: 50px;
+  height: 450px;
+  border-radius: 50%;
+  background-color: yellow;
+  animation: roda-roda 0.5s linear infinite;
+  transition: 0.5s;
+}
+
+.vetor::before {
+  content: " ";
+  width: 50px;
+  height: 450px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: blue;
+  transform: rotate(-50deg);
+}
+
+.vetor::after {
+  content: " ";
+  width: 50px;
+  height: 450px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  transform: rotate(50deg);
+}
