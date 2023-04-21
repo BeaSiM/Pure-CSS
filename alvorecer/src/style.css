@@ -1,0 +1,47 @@
+body{
+  background-color: #222;
+  width: 100%;
+  heigth: 100%;
+  background-image:
+radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 5px),
+radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 3px),
+radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 4px),
+radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 1px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  overflow: hidden;
+  animation-name: light;
+  animation-duration: 10s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+}
+
+@keyframes light {
+  from {background-color: #222;}
+  to {background: rgb(69,132,180) 28%;
+  background-image: none;}
+}
+
+.moon {
+  width: 100px;
+  height: 100px;
+  background-color: #e2e2e2;
+  border-radius: 50%;
+  box-shadow: 5px 10px 25px 15px #fff, inset -10px -10px 10px #7d7575, inset 3px 3px 5px #fff;
+  position: relative;
+  right: -590px;
+  filter: blur(1px);
+  animation-name: darklight;
+  animation-duration: 10s;  
+  animation-fill-mode: forwards;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+}
+
+@keyframes darklight {
+  from {top: 0px;}
+  to {top: 200px; background-color: #ffdd21;
+  box-shadow: 5px 10px 25px 15px #ffff00, inset -10px -10px 10px #fffb4a, inset 3px 3px 5px #ffff6a;
+  filter: blur(0);}
+}
+
