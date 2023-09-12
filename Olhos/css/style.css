@@ -1,0 +1,95 @@
+body {
+    background-color: #000000;
+    overflow: hidden;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.esclera {
+    background-color: #ffffff;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    border-radius: 100px / 50px;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 300px;
+}
+
+.esclera::after {
+    content: "";
+    background-color: #ffffff;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    border-radius: 100px / 50px;
+    transform: rotate(180deg);
+    position: relative;
+    top: 50px;
+}
+
+.íris {
+    background: rgb(219,128,7);
+    background: linear-gradient(90deg, rgba(219,128,7,1) 0%, rgba(249,230,14,1) 100%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: relative;
+    top: 15%;
+    left: 30%;
+}
+
+.íris::after {
+    content: "";
+    background: rgb(219,128,7);
+    background: linear-gradient(90deg, rgba(219,128,7,1) 0%, rgba(249,230,14,1) 100%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    top: 170%;
+    right: 2%;
+    z-index: 1;
+}
+
+.pupila {
+    background-color: #160a02;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: 14%;
+    left: 15%;
+    box-shadow: inset -10px -10px 10px, inset 3px 3px 5px #ffffff;
+    animation: mymove 5s infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+}
+
+.pupila::after {
+    content: "";
+    background-color: #160a02;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 238%;
+    right: 2%;
+    box-shadow: inset -10px -10px 10px, inset 3px 3px 5px #ffffff;
+    z-index: 2;
+    animation: mymove 2s infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+}
+
+@keyframes mymove {
+    from {left: 0px;}
+    to {right: 2px;}
+}
